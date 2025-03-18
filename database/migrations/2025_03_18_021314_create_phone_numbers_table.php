@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('phone_numbers', function (Blueprint $table) {
             $table->id();
+            $table->string('iso_code',5);
+            $table->string('phone_number');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
+            $table->longText('line1');
+            $table->longText('line2');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
