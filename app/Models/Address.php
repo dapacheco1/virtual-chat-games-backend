@@ -10,4 +10,8 @@ class Address extends Model
 {
     /** @use HasFactory<\Database\Factories\AddressFactory> */
     use HasFactory,SoftDeletes;
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

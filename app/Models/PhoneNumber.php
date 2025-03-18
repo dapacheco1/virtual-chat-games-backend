@@ -10,4 +10,8 @@ class PhoneNumber extends Model
 {
     /** @use HasFactory<\Database\Factories\PhoneNumberFactory> */
     use HasFactory,SoftDeletes;
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
