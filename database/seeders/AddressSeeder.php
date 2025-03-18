@@ -12,6 +12,9 @@ class AddressSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('addresses')->insert([
+            'line1' => 'admin',
+            'line2' => 'Admin'
+        ]);
     }
 }

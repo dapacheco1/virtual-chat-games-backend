@@ -5,15 +5,16 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class WalletSeeder extends Seeder
+class UserWallet extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('wallets')->insert([
-            'current_balance' => 999999999
+        DB::table('user_wallet')->insert([
+            'user_id' => 1,
+            'wallet_id' => 1
         ]);
     }
 }

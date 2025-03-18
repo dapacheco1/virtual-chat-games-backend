@@ -12,6 +12,9 @@ class PhoneNumberSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('phone_numbers')->insert([
+            'phone_number' => '999999',
+            'iso_code' => 'ECU',
+        ]);
     }
 }
