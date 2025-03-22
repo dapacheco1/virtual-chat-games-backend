@@ -18,7 +18,7 @@ class Wallet extends Model
         parent::boot();
     
         static::creating(function ($issue) {
-            $issue->id = Str::uuid(36);
+            $issue->id = Str::uuid();
         });
     }
 
